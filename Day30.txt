@@ -1,0 +1,24 @@
+Multi Channel Campaign--------------------------
+
+1.These are the default campaigns in PEGA Marketing 
+2.Can send multiple actions through multiple channels
+3.Customer (from segment) given as input to strategy--->Strategy decide proposition for given customer ---> Campaign wil look for matching action for that proposition ---> That action's treatment will be delivered based on engagement policy/ arbitration.
+4. we can check for volume constraints 
+5. 3 engagaement types are there a. scheduled based campaign b. container based campaign c. event based campaign
+6. This campaign can have recurring scheduled runs
+7. Can perform 2 types of testing
+		a. distribution testing -- testing where we donot send any actions to any customers but will generate the estimation reports/ simulations to estimate the reach.
+		b. seed testing  -- testing where actions will be sent to seedlists/test customers but nothing will be recorded in interaction history/ . mainly used for testing the treatment content/ UI/UX of the treatment.
+
+
+
+Outbound Campaign ------------------------------
+
+1.Not default campaign in PEGA Marketing
+2.Can send only one actions through one channel
+3.We cannot use strategies in outbound campaign
+4. no check for volume constraints
+5. only schedule based campaign
+6. mainly used for transactional actions (where customer's outcome is not required or these are notification based actions) 
+7. This campaign can run only one time (Now/Later time)
+8. cannot perform any testing before running the campaign

@@ -1,0 +1,83 @@
+----- Lets say u sent 5 actions to the customer (propostion/action) and customer responded to 3 actions
+
+those 3 actions are displayed as bubbles
+
+-- Each bubble in adaptive model monitoring tab corresponds to an action/proposition
+
+--- The larger the bubble size the more the number of responses received to that action.
+
+--- Performance (AUC) - Area Under Curve --- Its basically determines how best ur action is performing  or how good it has reached your customers. Ranges from 50-100 . 50 being lowest or default performance.
+
+----- Success rate --- Total number of positive responses received
+		 __________________________________________    * 100
+
+			Total number of responses received
+
+STANDARDCARD PROPOSITION
+
+TREATMENT -- Actual content delivered to the customer (message)
+
+For ex---- dear customer, we have 5% discount on credit card purchases. please click below to purchase.
+
+ACCEPT --- pyOutcome --- "Accepted"
+
+NOT INTERESTED --- pyOutcome --- "Rejected"
+
+
+
+
+
+-- TOP PREDICTORS
+
+TotalLiabilities --Is the potential predictor for standard card
+
+i.e The difference in value of totalliabilities field of customers is actually impacting the customer decision/outcome
+
+for ex--- totalliability = 500 of customer might make customer to accept standardcard
+totalliability == 30 of customer might make customer to reject standardcard.
+
+
+
+BINNING --- Creating partitions with equal intervals.
+
+Standard card to 10 CUSTOMERS and 5 customers responded
+
+Annualincome --- 5000 (MINIMUM) , 10000 (MAXIMUM)
+
+5000 - 10000
+
+FOR EX
+
+5000-6000 --- 2 CASES -- 100% negative
+6000-7000
+7000-8000 - 1 CASES
+8000-9000 - 1 case -- 100% negative
+9000-10000 - 1 CASE - 100% positive
+
+5 BINS -- ALL OF THEM ARE EQUAL INTERVALS OF 1000 -- DECREASIN
+
+MIN 5% OF TOTAL CASE SHOULD BE IN EACH BIN = 0.05
+
+5000-7000 - 2cases
+7000-9000
+9000-11000 - 2 CASES -- 50% postivei and 50% negative
+
+3 BINS
+1000 responses == in every bin keep 1 customer
+
+
+
+- EVIDENCE --- Total number of responses after which adaptive model should be recalculated 
+
+--if there are million responses -- 
+
+pyEvidence == 10000
+
+customer 1 -- responded positive
+
+customer2 -- not calculate
+.......
+.....
+
+10000's response --- all together all responses are calculated by adaptive model.
+	

@@ -1,0 +1,101 @@
+ENVIRONMENT SETUP - Setup decisioning services, validate whether decisioning services are running
+
+APPLICATION CREATION -- created the application - Artifacts, NBAD Tests, ops manager rulesets, XCAR, CAR Model , NBAD Template, Context dictionary
+
+BUSINESS TAXONOMY, - Issues, groups, propositions, attributes , GENERATED FORM, CUSTOM FORM, versioned proposition data / unversioned propositioned data.
+
+STRATEGY -- SIMPLe strategy components, canvas, run the strategy.
+
+
+==========================================
+
+
+CHURN -- Customer lost
+
+for ex -- netflix has 500 customers in jan 2024, netflix is having only 300 customers in may 2024
+
+-- 200 customers are churn
+
+200/500 * 100 ==
+
+===========================================================================
+
+CLV -- Customer Lifetime Value
+
+--- Net profit score as part of customer's lifetime relationship with business
+
+--- for ex -- you are using airtel mobile connection since last 5 years
+your friend using the same airtel recently since last 6 months
+
+
+ur CLV value will be higher compared to CLV of ur friend
+
+=====================================================================
+
+Propensity --- which is how likely the customer responds positively to an action/proposition
+
+propensity is calculated for each action/proposition using ADAPTIVE MODELS / PREDICTIVE MODELS.
+
+0 - 1 
+
+0 - BEING LOWEST PROPENSITY
+
+1- BEING HIGHEST PROPENSITY ==== .pyPropensity
+
+0.56 == 56% probability is there customer will accept the offer
+proposition of MASTERCARD -- 0.95 == 95% probability is there customer will accept that offer/prosition/action
+0.6554
+
+0.5 PROPENSITY FOR ALL PROPOSITIONS AT INITIAL STAGE == 50% PROBABILITY
+
+AS customers keep accepting the offers
+
+u promoted credit card to 100 customers... 80 ppl accept ======== propensity will keep increasing
+
+0.51, 0.52,0.524,...............
+
+as customers reject credit card --------- propensity wil keep decreasing
+
+0.5000, 0.491,0.489...........
+
+
+1 million, 10 million customers ---- 
+
+1million times ==== which can give bad performance
+
+--- after how many responses we shud calculate propensity ==== 1000 , 5000 responses
+
+u sent 1CRPersonal loan offer to 1 millions customers -- 1 person responded as rejected, till 1000 responses adaptive model wont trigger... 
+
+====== EVIDENCE -- PYEVIDENCE ====== number of responses after which model should recalculate the propensity.
+
+
+========================================================
+
+NETPROMOTERSCORE ---- Net promoter score is how satisfied a customer is with the business products/services
+
+for ex -- u have used zomato and u are very much satisfied and u have rated it 5 star on playstore
+
+u wil also promote the app to ur friends...
+
+.NetPromoterScore of customer 1== high
+
+.netpromoterscore of customer 2 == low
+
+-1 to +1
+======
+
+-1 0.5
+-0.66
+
++psotive netpromoter score == happiest customers
+
+ur netpromoterscore will be highe compared to others who gave a poor rating.
+
+===============================================================
+
+@BASECLASS === TOPMOST CLASS OF ALL THE CLASSES
+
+
+For all SR Classes === Data-pxStrategyResult is the parent SR Class
+where all ur properties -- pyissue , pygroup, pyname

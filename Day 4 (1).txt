@@ -1,0 +1,111 @@
+Application Creation 
+
+-- Artifacts --- auto generated rules
+
+--- NBAD Tests --- store the testing related rules
+
+--- Ops Manager ruleset --- store the ops manager changes done as part of business requests
+
+---- XCAR Component --- data model (classes,tables,columns)
+
+---- NBAD Template --- sample offers/sample categories
+
+---- GenAI Framework --- used for gen ai related operations
+
+---- PegaDEVOPSFoundation --- used by revision manager for automated deployments of ops manager changes
+
+--- Context dictionary --- using wizard
+
+---- External Cassandra data base - DDS service / node
+
+
+BUSINESS TAXONOMY
+
+--- Business issue -- purpose of the promotion -- pyIssue
+
+1. ACQUISITION
+2. SALES
+
+--------- business groups --- category of the promotion --- pyGroup
+
+---------- PERSONAL LOANS , HOME LOANS
+
+----------- propositions --- promotions itself -- anything u propose to the customer -- pyName
+------------------- 1 CR PERSONAL LOAN, 50 LAKHS HOUSING LOAN
+
+.pyLabel -- short description of the proposition
+
+Keycode -- UNIQUE ID for each proposition 
+
+
+
+
+BUSINESS TAXONOMY
+---- BUSINESS ISSUE -- GROW
+-------------------- BUSINESS GROUP ---- CREDIT CARDS
+------------------------------- PROPOSITIONS ----- MASTERCARD/VISACARD
+------------------------------------- ATTRIBUTES (Characteristics of the propositions) -- monthlyEMI, expirydate, duration
+
+
+
+--- To add the attrbutes for proposition
+
+1. go to the form tab and add the fields
+2. save the decision data and open individual proposition and update
+
+
+Before 23 -- pyEditElement --- circumstanced by groupname
+
+after 23 --- no pyeditelement --- create a section with the groupname
+
+generated form --- text field attributes with no custom controls 
+
+Custom form --- creates a new section with same group name with advanced controls etc
+
+make sure the fields created in custom form are added in the FORM tab.
+
+
+Now open the propisition and update the fields.
+
+
+
+SR Class -- strategy result class 
+
+<APPLICATIONID>-SR-<BUSINESSISSUE>-<BUSINESSGROUP>
+
+
+<APPLICATIONID>-SR-<BUSINESSISSUE>
+
+CustomerID
+
+Debit cards'
+CreditCards
+
+CDH-SR --- customerID
+
+CDH-SR-Grow-DebitCards -- DebitCardMonthlyEMI
+
+1. customer's interactions
+
+2. customer's decisions
+
+laptop--- rejected
+
+this year we dont need to promote
+
+
+PROPOSITION --- Create at pega decisioning
+
+ACTION --- create as part of PEGA Marketing
+
+Proposition and action both are same except
+
+ACTIONS ARE AUTOMATICALLY BACKEDUP by proposition but vice versa is not same
+
+
+----- Without an action we cannot promote to the customer --- 
+
+ACTION -- PEGA MARKETING TOPIC --
+
+Every proposition should have  a matching action to send to the customer
+ 

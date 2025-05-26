@@ -1,0 +1,75 @@
+Score card --- used for automating applications without manual intervention using below format
+
+we have conditions + combiner
+
+best ex =-- cibil score 
+
+
+based on ur age, personal loan, If u have already paying emi on time , ====== cibil score --- in background 
+
+
+factors into consideration + combiner function === CIBIL SCORE
+
+
+-- daily 10000'S OF APPLICATIONS TO BANK FOR CREDIT CARD -- AN EMPLOYEE CANNOT PROCESS EACH AND EVERY APPLICATION
+
+
+----- CONDITIONS + COMBINER === SCORE / SEGMENT RESULT 
+
+Bank will already define requirement as Age> 25 & salary shud be min 1l per month, and should have not credit card...
+
+Age> 25 === 80 score
+age < 25 === 40
+
+salary > 1l == 80 score
+otherwise 40 score
+
+don't have credit card == 80
+otherwise 30 
+
+COMBINER == SUM
+
+80+80+80 = 240
+
+IF SCORE > 200 === CUSTOMER IS ELIGIBLE
+
+IF SCORE < 200 === CUSTOMER IS NOT ELIGIBLE 
+
+
+
+------------- CONSIDERATIONS -----------
+
+1. Always add the values for numeric attributes from low to high
+2. we have only =, < , <= so decide range as per the requirement
+3. Consider segment result from low to high or Bad to good values.
+4. Provide the data in scorecard as per the customer / context table data.
+
+
+
+
+
+
+Every component added to the strategy canvas will indirectly generate a page that will store the outputs of that component
+
+
+
+
+Output of score card / predictive models / decision rules are stored in the property called .pxSegment
+
+.pyIssue
+.pyGroup
+.pyName
+.pyChannel
+.pyDirection
+.pxSegment
+.pyPropensity
+
+
+
+
+Solid line --- will copy the entire component output to the next connected component output
+
+Dotted line -- will indirectly refer fields being referred and donot pass/copy.
+
+
+Persona -- replica of customer information usually hardcoded in data transforms used for testing purpose.

@@ -1,0 +1,70 @@
+Interaction History -- Group of data tables that stores the customer interactions for the given actions.
+
+Prior to 23 version, we can see the interaction history of all the customers but from 23 onwards we can only see IH at a customer LEVEL.
+
+
+Navigate to the customer decision HUB > on top right click on customer profile viewer > Interaction history
+
+Select a customer and click on RUN - View interaction history of that particular customer
+
+1. Fact Table - Data-Decision-IH-Fact -- Fact table is responsible for aggregating the information from all the dimension tables and displaying on UI
+
+
+
+2. Dimension Tables - 7 Dimension tables
+
+	--- Action Dimension --- stores action information like action name, actionid , pyissue, pygroup -- pzID
+	--- Operator Dimension --- stores operator information like operator who initiated the interaction - PZid
+	--- Application Dimension - PZID
+	--- Outcome Dimension -- store the outcome information like pyoutcome, pzoutcomeid
+	--- Journey Dimension
+	--- Customer Dimension
+	--- Channel Dimension
+
+
+
+.pxActioNID == ActionDimension.pzID
+
+.pxOutcomeID = OutcomeDimension.pzID
+
+
+....... For all the remaining dimension tables.
+
+
+
+Firstly using REALTIME CONTAINER Response has the eligible actions / treatments ------ Sends actions to the channel
+
+Channel will capture this actions / treatments and displays the treatments ( website/customer service portal/ mobile application)
+
+Customer will see the actions delivered as response from the realtime container & displayed using channel
+
+Channel has to display CTA buttons ( accept / reject / more details)
+
+On click of this CTA buttons -- again invoke the capture response API
+
+-
+
+
+PEGA -----------> REALTIME CONTAINER ---------> CUSTOMER ( lets say customer eligible for 4 credit cards and these 4 are returned in container response)
+
+CUSTOMER --------------> CAPTURE RESPONSE -----------> PEGA ( customer will accept 1 credit card --- this comes back to pega using captureresponse)
+
+
+
+interaction ID --- Unique id indicates session information of the customer,
+
+
+THIS IS CALLED AS FEEDBACK LOOP.
+
+
+DIFFERENT WAYS OF CAPTURING INTERACTION HISTORY
+
+1. using offer flows / action flows 
+
+2. CAPTURE RESPONSE API
+
+3. Using CaptureInteraction Activity --- this activity will internally run a dataflow that wil insert records into interaction history 
+
+( take all the results in IHSupportingInfoPg.pxResults and append this results into interaction history using data flow)
+
+4. DF_CaptureInteraction

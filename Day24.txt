@@ -1,0 +1,30 @@
+retrieving information from interaction history
+
+1. to run the customer profile viewer with the subjectID and check interactionhistory
+2. to use IH Summaries and specify the columns and timeperiod 
+3. u can also use the strategy to retrieve and do some logic.
+
+
+
+CUSTOM ATTRIBUTES IN THE API - PEGAMKTCONTAINER API  & CAPTURERESPONSE API
+
+
+1. extendedcontainerproperties - update this data transform to include custom proposition attributes - FOR REALTIME CONTAINER RESPONSE
+
+2. mapextendedcontainerproperties - FOR CUSTOM ATRIBUTES IN REQUEST DATA TRANSFORM
+
+3. pyInteractionHistoryConfiguration - for adding custom attributes to interaction history
+
+
+WE HAVE TO SEND SOME PROMOTION TO THE CUSTOMER --- THAT CUSTOMER IS EXISTING ON EXTERNAL CHANNELS
+
+
+IF UR REQ-- TO DISPLAY OFFERS ON EXTERNAL CHANELS WESITE/MOBILE/CUSTOMER SERVICE
+
+
+PEGA --- CUSTOMER -- REALTIMECONTAINER API --- RESPOND WITH ALL ELIGIBILE ACTIONS
+
+
+REQ --- WHEN CUSTOMER ACCEPTS AN OFFER ON THE CHANNEL BY CLICKING ON A BUTTON ON THAT MOBILE,WEBSITE
+
+CUSTOMER ---- PEGA --- CAPTURERESPONSE API --- CONTAIN WHATEVER RANKED RESULTS CUSTOMER HAS RESPONDED IN THE REQUEST

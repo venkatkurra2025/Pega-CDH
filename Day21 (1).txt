@@ -1,0 +1,26 @@
+Constraints ---
+
+1. Contact Policies -- Maximum no of times each context can be contacted on a particular channel in a given time period.
+
+
+Applicable only for outbound channels.
+
+For ex -- u r promoting personal loan to the customers.
+
+Every day im sending personal loan email to the customers.
+
+
+
+2. Suppression rules - Hiding particular action based on customer's behaviour.
+
+for ex == 
+
+system can send maximum 2 STANDARD CARD emails per customer in a  week.
+
+1 STANDARD CARD --- U SENT TODAY --- CUSTOMER HAS ACCEPTED the 1st standard card
+
+2ND STANDARD CARD --- U R SENDING DAY AFTER TOMORROW
+
+suppress the standard card the 2nd time because customer has already accepted it
+
+3. Volume Constraints

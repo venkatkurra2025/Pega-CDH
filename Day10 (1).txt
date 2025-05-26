@@ -1,0 +1,14 @@
+To invoke datasets - use Dataset-Execute method
+
+--- we have datasets optimal for performance mainly when data is huge
+
+1. we can add multiple keys which are indexed columns that will retrieve data much faster compared to activity methods
+2. we have partition keys those will query data on different nodes not only single node.
+3. datasets along with dataflows wil drastically improve performance
+
+
+--- for ex to save 10000 records to database using activity -- 50-100 records per min
+
+--- same dataflow with dataset will process 1000-2000 records per min
+
+---- dataflow will create no of threads --- 5 instances on all the nodes...will run in background node

@@ -1,0 +1,96 @@
+Adaptive MODEL -- Self learning models used to predict the customer behavior by providing recommendations
+
+
+DIFF BETWEEN ADAPTIVE MODEL AND PREDICTIVE MODEL --- important interview qn
+
+1.Adaptive model can work without any historical data..
+
+whereas predictive model cannot work without any historical data...
+
+
+2. Adaptive models are simple models and doesnnot use any complex machine learning argorithsm but predictive model uses complex PMML language and uses data science machine learning algorithms
+
+
+
+
+
+
+
+
+
+inorder for the model to provide recommendations i.e customer 1 recommend credit card, customer2 recommend debitcard
+
+historical data -- INTERACTION HISTORY --- History of interactions made with a given customer that includes, propositions we have recommended... outcomes made by the customer
+
+for ex --- for a customer A --- pega decisioning proposed 3 NBAs
+
+1. credit card
+2. debit card
+3. personal loan 
+
+--- Customer A -- Accepted credit card and rejected debit card and personal loan...
+
+--------- Models will actually generate the propensity output at a proposition level.
+
+ Credit Card --- 0.75 propensity --- 75% probability that customer will accept the offer
+debit card -- 0.50 propensity
+personal loan -- 0.45 propensity
+
+
+Predictors --- Predictors are nothing but the attributes with predictive power
+
+
+For ex --- 
+
+CustomerID --- customerid 100 and customerid 200 might not potentially impact the customer outcome
+
+Age --- Age 18 and Age 25 customers might potentially impact the customer outcome
+
+
+Income
+
+PRIMARY CONTEXT -- CUSTOMER CLASS
+
+ASSOCIATED DATA -- PRODUCTS CLASS
+
+ProductName ---
+
+
+IH Summaries --- data sets which are used to extract the records from interaction history for certain timeperiod.
+
+for ex--- i want the Interaction history data for last 30 days and i need only few columns....
+
+we have to create IH Summary dataset
+
+
+Adaptive Model -- initial propensity by default will be 0.5
+
+For ex -- standard card got 0.5 ---- 50% - 50% chance of customer accepting this proposition
+
+Now as the customers accept this standard card --- propensity keeps increased
+
+Accecpted 1 --- 0.558
+Accepted 2 - 0.569
+Accepted 3 - 0.571
+
+
+0 - 1
+------------ ADM FACTORIES --- ADAPTIVE MODEL RESPONSES -------
+
+
+Configure > Decisioning > Model Management
+
+We see all the model's responses 
+
+we need to pass 5 mandatory parameters
+
+1. business issue
+2. business group
+3. proposition name
+4. channel
+5. direction
+
+
+ADM Model wil create a distinct record for every unique combination of the above 5 parameters.
+
+
